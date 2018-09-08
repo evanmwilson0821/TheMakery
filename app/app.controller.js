@@ -1,6 +1,6 @@
 export class AppController {
   constructor($scope) {
-    let message = "Hello controller";
+    let message = "Hello controllers";
 
     $scope.message = message;
   }
