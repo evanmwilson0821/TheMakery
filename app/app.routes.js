@@ -23,6 +23,12 @@ class AppRoutes {
         resolve: {
           projects
         }
+      })
+      .state('dashboard.project-type-gallery', {
+        url: '/project-type-gallery',
+        views: {
+          "@": 'projectTypeGallery'
+        }
       });
 
     $locationProvider.html5Mode(true);

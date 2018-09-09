@@ -1,0 +1,7 @@
+<div>
+    <div ng-repeat="projectType in $ctrl.projectTypes">
+        {{ projectType.name }} <img src='{{ "../../../assets/img/project-type/" + projectType.icon }}'>
+        {{projectType.description}}
+        <button ng-click="$ctrl.pickProjectType(project.type)">Pick this</button>
+    </div>
+</div>

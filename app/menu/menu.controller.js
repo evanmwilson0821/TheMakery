@@ -1,6 +1,6 @@
 import projectTypeData from "./project-type-gallery/project-type.data.json";
 
-class DashboardController {
+class MenuController {
   /* @ngInject*/
   constructor($state, $window) {
     this.$state = $state;
@@ -38,4 +38,4 @@ class DashboardController {
   }
 }
 
-export default DashboardController
+export default MenuController

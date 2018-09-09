@@ -1,3 +1,5 @@
-<input ng-model="$ctrl.username">
-<input ng-model="$ctrl.password">
+<form><input ng-model="$ctrl.username" name="username" ng-change="$ctrl.errorOccured=false">
+<input ng-model="$ctrl.password" type="password" name="password" ng-change="$ctrl.errorOccured=false">
 <button ng-click="$ctrl.login()">Sign in</button>
+</form>
+    <div ng-show="$ctrl.errorOccured">Wrong username or password for this type of account!</div>

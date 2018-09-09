@@ -34,8 +34,14 @@ module.exports = function(dev) {
       },{
         test: /\.(html)$/,
         use: {
-          loader: 'html-loader'
+          loader: 'html-loader',
+          options: {
+            attrs: ['img:src']
+          }
         }
+      },{
+        test: /\.(gif|png|jpg)$/,
+        loader: 'file-loader'
       }]
     }
   }

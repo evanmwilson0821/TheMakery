@@ -1,5 +1,5 @@
-import AppRoutes from './app.routes.js';
-import AppController from './app.controller.js';
+import routes from './app.routes';
+import component from './app.component';
 
 import loginModule from './login/login.module';
 import homeModule from './home/home.module';
@@ -12,6 +12,6 @@ angular.module('app', [
   homeModule,
   dashboardModule
 ])
-  .config(AppRoutes)
-  .controller('AppController', AppController)
+  .config(routes)
+  .component('app', component)
   .constant({"API_URL": "http://localhost:8000/"});
