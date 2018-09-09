@@ -1,13 +1,16 @@
 class DashboardController {
   /* @ngInject*/
-  constructor($state) {
-    this.$state = $state;
+  constructor($http, API_URL) {
+    this.$http = $http;
+    this.API_URL = API_URL;
   }
 
-  loginAs(role) {
-    this.$state.go('login', {
-      role: role
-    });
+  $onInit() {
+    this.projects = this.projects.data;
+  }
+
+  parseProjectData() {
+
   }
 }
 

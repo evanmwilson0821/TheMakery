@@ -1,11 +1,16 @@
 class LoginController {
   /* @ngInject*/
-  constructor($window) {
+  constructor($window, $state) {
     this.$window = $window;
+    this.username = '';
+    this.password = '';
+    this.$state = $state;
   }
 
   login() {
+    if (this.username === "") {
 
+    }
   }
 }
 

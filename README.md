@@ -28,4 +28,5 @@ This is a project for hackathon PennApps XVIII created from the
     * Go to the back-end 
       ``` bash
         cd backend
+        php -S localht:8000 -t backend/
       ```
