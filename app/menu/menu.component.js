@@ -1,5 +1,5 @@
-import template from './dashboard.html';
-import controller from './dashboard.controller';
+import template from './menu\'.html';
+import controller from './menu.controller';
 
 export default {
   template,

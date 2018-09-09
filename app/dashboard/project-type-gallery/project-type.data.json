@@ -1,0 +1,25 @@
+{
+  "MANAGEMENT": {
+    "name": "Management",
+    "icon": "management.png",
+    "description": "This is management",
+    "inputs": [
+      "Name",
+      "Sth about management 1",
+      "Sth about management 2",
+      "Sth about management 3",
+      "sth about management 4"
+    ]
+  },
+  "ENGINEERING": {
+    "name": "Enigneering",
+    "icon": "management.png",
+    "description": "This is engineering",
+    "inputs": [
+      "Name",
+      "Sth about engineering 1",
+      "Sth about engineering 2",
+      "Sth about engineering 3"
+    ]
+  }
+}

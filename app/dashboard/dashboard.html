@@ -1,5 +1,12 @@
-<div>
-    <div ng-repeat="project in $ctrl.projects">
-        {{ project.type }}
+<div ng-if="$ctrl.$state.is('dashboard')">
+    <div>
+        <div ng-repeat="project in $ctrl.projects">
+            {{ project.name }} Number of completed tasks: {{ project.numberOfCompletedTasks }}
+            ({{project.progressInTasks}}% completed)
+        </div>
+        <button ng-if="$ctrl.app.isEmployer" ng-click="$ctrl.goToProjectTypeGallery()">Create a new project</button>
     </div>
+
+    <button ng-click="$ctrl.$window.localStorage.removeItem('userHash');$ctrl.$window.location.reload()">Sign off</button>
 </div>
+<div ui-view="user"></div>
