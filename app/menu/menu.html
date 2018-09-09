@@ -1,8 +1,10 @@
 <div class="menu-bar">
-    <div class="mini-logo">here logo</div>
-    <select label="menu-dropdown" class="dropdown">
-        <option>Dashboard</option>
-        <option>Portoflio</option>
-        <option>Sign out</option>
+    <div ng-click="$ctrl.goTo('dashboard')" class="mini-logo">here logo</div>
+    <div class="filler"></div>
+    <select label="menu-dropdown" ng-model="$ctrl.dropdownSelection" ng-change="$ctrl.dropdownChange()"
+            class="dropdown">
+        <option value="dashboard">Dashboard</option>
+        <option value="portfolio">Portoflio</option>
+        <option value="signout">Sign out</option>
     </select>
 </div>

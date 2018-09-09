@@ -6,7 +6,5 @@
         </div>
         <button ng-if="$ctrl.app.isEmployer" ng-click="$ctrl.goToProjectTypeGallery()">Create a new project</button>
     </div>
-
-    <button ng-click="$ctrl.$window.localStorage.removeItem('userHash');$ctrl.$window.location.reload()">Sign off</button>
 </div>
 <div ui-view="user"></div>

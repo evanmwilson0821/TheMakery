@@ -1,6 +1,6 @@
 import component from './menu.component';
-import projectTypeGalleryModule from './project-type-gallery/project-type-gallery.module';
+import './menu.scss';
 
-export default angular.module('dashboard', [projectTypeGalleryModule])
-  .component('dashboard', component)
+export default angular.module('menu', [])
+  .component('menuBar', component)
   .name;

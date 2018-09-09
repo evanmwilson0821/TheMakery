@@ -2,9 +2,8 @@ import projectTypeData from "./project-type-gallery/project-type.data.json";
 
 class DashboardController {
   /* @ngInject*/
-  constructor($state, $window) {
+  constructor($state) {
     this.$state = $state;
-    this.$window = $window;
     this.projectTypes = projectTypeData;
   }
 
