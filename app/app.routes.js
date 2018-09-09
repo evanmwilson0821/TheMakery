@@ -1,4 +1,4 @@
-export class AppRoutes {
+class AppRoutes {
 
   constructor($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
@@ -6,10 +6,15 @@ export class AppRoutes {
       $stateProvider
         .state('home', {
           url: '/',
-          template: 'hello'
-
+          template: '<home></home>'
         })
+        .state('login', {
+          url: '/login/{role:student|employer}',
+          template: '<login></login>'
+        });
 
       $locationProvider.html5Mode(true);
   }
 }
+
+export default AppRoutes
