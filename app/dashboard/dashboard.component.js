@@ -3,5 +3,8 @@ import controller from './dashboard.controller';
 
 export default {
   template,
-  controller
+  controller,
+  bindings: {
+    projects: '<'
+  }
 }
