@@ -4,21 +4,23 @@ class AppController {
     this.$window = $window;
     this.$transitions = $transitions;
     this.isEmployer = false;
-    this.isStudent = false;
+    this.isIntern = false;
+    this.isLoggedIn = false;
   }
 
   $onInit() {
     this.$transitions.onBefore({}, (transition) => {
       const toStateName = transition.$to().name;
-      const isLoggedIn = this.$window.localStorage.getItem('userHash');
+      this.isLoggedIn = this.$window.localStorage.getItem('userHash');
       this.isEmployer = this.$window.localStorage.getItem('userHash') === "employer";
-      this.isStudent = this.$window.localStorage.getItem('userHash') === "student";
+      this.isIntern = this.$window.localStorage.getItem('userHash') === "intern";
 
-      if (!isLoggedIn && toStateName !== "login" && toStateName !== "home") {
+      if (!this.isLoggedIn && toStateName !== "login" && toStateName !== "home") {
         return transition.router.stateService.target('home');
       }
-      if (isLoggedIn){
-        if (toStateName === "login" || toStateName === "home") {
+      if (this.isLoggedIn){
+        if (toStateName === "login" || toStateName === "home" ||
+          (this.isIntern && (toStateName === 'project-type-gallery' || toStateName === 'create-project'))) {
           return transition.router.stateService.target('dashboard');
         }
       }
